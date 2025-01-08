@@ -7,7 +7,7 @@ export const NavBar = () => {
     <nav>
       <h1>
         <Link to="/" className="link">
-          BC
+          BC.
         </Link>
       </h1>
       <div className="otherLinks">

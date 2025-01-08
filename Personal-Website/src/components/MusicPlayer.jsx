@@ -12,7 +12,6 @@ export const MusicPlayer = () => {
   //<FontAwesomeIcon icon={faPause} style={{color: "#ffffff",}} />
   return (
     <div className="musicPlayerContainer">
-      <input type="range" min="1" max="100" value="50" />
       <div className="controlBtns">
         <FontAwesomeIcon
           className="controlIcons"
