@@ -13,7 +13,7 @@ main {
   height: fit-content;
   display: flex;
   flex-direction: column;
-  gap: 8rem;
+  gap: 4rem;
   align-items: center;
 }
 .contentHead {
@@ -30,4 +30,10 @@ h5 {
 mark {
   background: none;
   color: #7189bb;
+}
+
+.canvas {
+  border: red solid;
+  width: 100%;
+  height: fit-content;
 }

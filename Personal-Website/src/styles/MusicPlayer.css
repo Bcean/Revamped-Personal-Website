@@ -25,7 +25,16 @@ input:focus {
 }
 .controlIcons {
   font-size: 2rem;
+  transition: 0.3s;
+}
+.controlIcons:hover {
+  cursor: pointer;
 }
 .controlIconsPlay {
   font-size: 2.5rem;
+  transition: 0.3s;
+}
+
+.controlIconsPlay:hover {
+  cursor: pointer;
 }

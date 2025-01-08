@@ -1,11 +1,12 @@
-import React from "react";
 import "../styles/Home.css";
 import { MusicPlayer } from "./MusicPlayer";
+
+import React, { useRef, useEffect } from "react";
 
 export const HomeMusic = () => {
   return (
     <div className="homeMusicContainer">
-      <h1>Music Visual here</h1>
+      <div className="canvas"></div>
       <MusicPlayer />
     </div>
   );

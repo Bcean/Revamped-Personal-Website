@@ -5,8 +5,19 @@ import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { faForwardStep } from "@fortawesome/free-solid-svg-icons";
 import { faBackwardStep } from "@fortawesome/free-solid-svg-icons";
 import { faPause } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import { use } from "react";
 
 export const MusicPlayer = () => {
+  const [musicStatusLogo, setmusicStatusLogo] = useState(faPlay);
+
+  const changeStaus = () => {
+    if (musicStatusLogo === faPlay) {
+      setmusicStatusLogo(faPause);
+    } else if (musicStatusLogo === faPause) {
+      setmusicStatusLogo(faPlay);
+    }
+  };
   //slider state with onchange
   //change buttons
   //<FontAwesomeIcon icon={faPause} style={{color: "#ffffff",}} />
@@ -20,8 +31,9 @@ export const MusicPlayer = () => {
         />
         <FontAwesomeIcon
           className="controlIconsPlay"
-          icon={faPlay}
+          icon={musicStatusLogo}
           style={{ color: "#ffffff" }}
+          onClick={changeStaus}
         />
         <FontAwesomeIcon
           className="controlIcons"
