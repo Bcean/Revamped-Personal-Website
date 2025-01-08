@@ -24,7 +24,7 @@ main {
 
 input[type="text"] {
   width: 350px;
-  height: 55px;
+  height: 40px;
   font-family: inherit;
   border-radius: 15px;
   border: none;
@@ -36,7 +36,7 @@ input [type="text"]:active {
 
 input[type="email"] {
   width: 350px;
-  height: 55px;
+  height: 40px;
   font-family: inherit;
   border-radius: 15px;
   border: none;

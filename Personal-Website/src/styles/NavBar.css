@@ -11,6 +11,13 @@ nav {
   text-decoration: none;
   color: white;
   font-weight: bold;
+  transition: 0.3s;
+}
+
+.link:hover {
+  cursor: pointer;
+  color: #7189bb;
+  text-shadow: 0px 4px 5px rgba(225, 225, 225, 0.2);
 }
 
 ul {

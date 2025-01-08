@@ -14,6 +14,7 @@ export const ContactFormSection = () => {
       <form>
         <input type="text" placeholder="Name"></input>
         <input type="email" placeholder="Email" />
+        <input type="text" placeholder="Subject"></input>
         <textarea placeholder="Message"></textarea>
         <input type="submit"></input>
       </form>

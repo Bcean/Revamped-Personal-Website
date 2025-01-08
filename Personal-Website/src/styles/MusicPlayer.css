@@ -3,6 +3,9 @@
   justify-content: space-evenly;
   width: 40%;
   align-items: center;
+  padding: 2.5%;
+  border-radius: 15px;
+  background: rgba(141, 159, 196, 0.3);
 }
 
 input {
@@ -21,5 +24,8 @@ input:focus {
   width: 100%;
 }
 .controlIcons {
-  font-size: 3.5rem;
+  font-size: 2rem;
+}
+.controlIconsPlay {
+  font-size: 2.5rem;
 }

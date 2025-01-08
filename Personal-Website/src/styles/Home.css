@@ -13,6 +13,7 @@ main {
   height: fit-content;
   display: flex;
   flex-direction: column;
+  gap: 8rem;
   align-items: center;
 }
 .contentHead {

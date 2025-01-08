@@ -6,9 +6,6 @@ export const Projects = () => {
   return (
     <main id="mainProjects">
       <ProjectsContent></ProjectsContent>
-      <div className="projectsMusicContainer">
-        <MusicPlayer></MusicPlayer>
-      </div>
     </main>
   );
 };

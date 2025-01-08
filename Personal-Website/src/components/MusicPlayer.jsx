@@ -19,7 +19,7 @@ export const MusicPlayer = () => {
           style={{ color: "#ffffff" }}
         />
         <FontAwesomeIcon
-          className="controlIcons"
+          className="controlIconsPlay"
           icon={faPlay}
           style={{ color: "#ffffff" }}
         />
