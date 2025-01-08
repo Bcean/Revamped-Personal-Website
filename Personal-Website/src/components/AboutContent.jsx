@@ -6,8 +6,8 @@ export const AboutContent = () => {
       <div className="aboutContentImg">
         <img></img>
       </div>
-      <hr></hr>
-      <h3>
+      <hr id="aboutHr"></hr>
+      <h3 id="aboutHead">
         <mark>About</mark> Me
       </h3>
       <h5 id="aboutBlurb">

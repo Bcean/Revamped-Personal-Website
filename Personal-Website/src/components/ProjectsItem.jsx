@@ -1,9 +1,12 @@
 import React from "react";
 import "../styles/Projects.css";
 
-export const ProjectsItem = () => {
+export const ProjectsItem = ({ animationDelaySecs }) => {
   return (
-    <div className="projectItemContainer">
+    <div
+      className="projectItemContainer projectItem"
+      style={{ animationDelay: `${animationDelaySecs}s`, opacity: 0 }}
+    >
       <div className="projectsItemImg">
         <img></img>
       </div>

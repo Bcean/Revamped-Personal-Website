@@ -20,8 +20,14 @@ main {
   font-size: 6rem;
   font-weight: bold;
   margin-bottom: 2%;
+  animation: fadeInSlide 2s ease-in-out forwards;
+  opacity: 0;
 }
-
+#homeBlurb {
+  animation: fadeInSlide 2s ease-in-out forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
 h5 {
   font-size: 1.25rem;
   font-weight: 500;
@@ -33,7 +39,23 @@ mark {
 }
 
 .canvas {
-  border: red solid;
   width: 100%;
   height: fit-content;
+  animation: fadeInSlide 2s ease-in-out forwards;
+  animation-delay: 0.6s;
+  opacity: 0;
+}
+
+@keyframes fadeInSlide {
+  0% {
+    transform: translateX(-50vw);
+    filter: blur(20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    filter: blur(0px);
+    opacity: 1;
+  }
 }

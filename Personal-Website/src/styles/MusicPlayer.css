@@ -38,3 +38,32 @@ input:focus {
 .controlIconsPlay:hover {
   cursor: pointer;
 }
+#aboutMusicControl {
+  animation: fadeInSlide 2s ease-in-out forwards;
+  animation-delay: 2.5s;
+  opacity: 0;
+}
+
+#homeMusicControl {
+  animation: fadeInSlide 2s ease-in-out forwards;
+  animation-delay: 1.2s;
+  opacity: 0;
+}
+#contactMusicControl {
+  animation: fadeInSlide 2s ease-in-out forwards;
+  animation-delay: 1.8s;
+  opacity: 0;
+}
+@keyframes fadeInSlide {
+  0% {
+    transform: translateX(-50vw);
+    filter: blur(20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}

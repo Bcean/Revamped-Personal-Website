@@ -5,7 +5,7 @@ import "../styles/About.css";
 export const AboutSkills = () => {
   return (
     <div className="aboutSkillsContainer">
-      <h4>My Currrent developer skills</h4>
+      <h4 className="currentSkillsHead">My Currrent developer skills</h4>
       <div className="softwareIconContainer">
         <svg
           xmlns="http://www.w3.org/2000/svg"

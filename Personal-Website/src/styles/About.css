@@ -19,13 +19,21 @@ main {
   background-color: white;
   border-radius: 36px;
   margin-bottom: 2%;
+  animation: fadeInSlide 2s ease-in-out forwards;
+  opacity: 0;
 }
-
-hr {
-  width: 100%;
+#aboutHead {
+  animation: fadeInSlide 2s ease-in-out forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+#aboutHr {
+  width: 70%;
   height: 5px;
   border-radius: 10px;
   background-color: white;
+  animation: fadeInSlide 2s ease-in-out forwards;
+  opacity: 0;
 }
 
 h3 {
@@ -39,6 +47,9 @@ h3 {
   font-size: 1.25rem;
   font-weight: 400;
   text-align: center;
+  animation: fadeInSlide 2s ease-in-out forwards;
+  animation-delay: 1s;
+  opacity: 0;
 }
 
 .aboutSkillsContainer {
@@ -59,8 +70,31 @@ h4 {
   display: grid;
   grid-template-columns: 1fr 1fr auto;
   grid-template-rows: 1fr 1fr 1fr auto;
+  animation: fadeInSlide 2s ease-in-out forwards;
+  animation-delay: 2s;
+  opacity: 0;
 }
 
 .lastGridIcon {
   grid-column: 2 / 3;
+}
+
+.currentSkillsHead {
+  animation: fadeInSlide 2s ease-in-out forwards;
+  animation-delay: 1.5s;
+  opacity: 0;
+}
+
+@keyframes fadeInSlide {
+  0% {
+    transform: translateX(-50vw);
+    filter: blur(20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    filter: blur(0px);
+    opacity: 1;
+  }
 }

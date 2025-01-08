@@ -33,7 +33,7 @@ export const ContactRightSection = () => {
           ></path>
         </svg>
       </div>
-      <h1>Audio vizualizer</h1>
+      <h1 id="contactAudioVisual">Audio vizualizer</h1>
       <div className="contactMusicContainer">
         <MusicPlayer></MusicPlayer>
       </div>

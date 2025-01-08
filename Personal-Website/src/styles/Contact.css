@@ -14,12 +14,18 @@ main {
   gap: 1rem;
   align-items: center;
 }
-
+#contactHead {
+  animation: fadeInSlide 2s ease-in-out forwards;
+  opacity: 0;
+}
 #contactBlurb {
   font-size: 1rem;
   font-weight: 400;
   text-align: center;
   margin-bottom: 2.5%;
+  animation: fadeInSlide 2s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 0.2;
 }
 
 input[type="text"] {
@@ -28,6 +34,8 @@ input[type="text"] {
   font-family: inherit;
   border-radius: 15px;
   border: none;
+  animation: fadeInSlide 2s ease-in-out forwards;
+  opacity: 0;
 }
 
 input [type="text"]:active {
@@ -40,6 +48,8 @@ input[type="email"] {
   font-family: inherit;
   border-radius: 15px;
   border: none;
+  animation: fadeInSlide 2s ease-in-out forwards;
+  opacity: 0;
 }
 
 input [type="email"]:active {
@@ -53,14 +63,18 @@ textarea {
   min-height: 100px;
   font-family: inherit;
   border-radius: 15px;
+  outline: none;
   border: none;
+  animation: fadeInSlide 2s ease-in-out forwards;
+  opacity: 0;
+  padding: 1%;
 }
 
 textarea:active {
   border: none;
   outline: none;
 }
-input[type="submit"] {
+button {
   width: 250px;
   height: 55px;
   font-family: inherit;
@@ -72,11 +86,34 @@ input[type="submit"] {
   outline: none;
   border: none;
   margin-top: 3%;
+  animation: fadeInSlide 2s ease-in-out forwards;
+  opacity: 0;
 }
 
-input[type="submit"]:active {
-  outline: none;
-  border: none;
+input[type="text"]:hover {
+  cursor: text;
+}
+input {
+  padding: 1%;
+}
+input::placeholder {
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #c2bebe;
+}
+
+textarea::placeholder {
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #c2bebe;
+}
+
+button:hover {
+  cursor: pointer;
+  color: rgb(226, 222, 222);
+  background-color: #5a6f9e;
 }
 form {
   display: flex;
@@ -102,4 +139,25 @@ form {
   width: 100%;
   display: flex;
   justify-content: center;
+  animation: fadeInSlide 2s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 1.4s;
+}
+#contactAudioVisual {
+  animation: fadeInSlide 2s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 1.6s;
+}
+@keyframes fadeInSlide {
+  0% {
+    transform: translateX(-50vw);
+    filter: blur(20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    filter: blur(0px);
+    opacity: 1;
+  }
 }

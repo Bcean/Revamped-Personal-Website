@@ -62,3 +62,21 @@
   border: none;
   filter: brightness(0.75);
 }
+
+.projectItem {
+  animation: fadeInSlide 2s ease-in-out forwards;
+}
+
+@keyframes fadeInSlide {
+  0% {
+    transform: translateX(-50vw);
+    filter: blur(20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
