@@ -1,0 +1,32 @@
+main {
+  height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0% 8% 0% 8%;
+}
+.homeContentContainer {
+  width: 35%;
+}
+.homeMusicContainer {
+  width: 35%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contentHead {
+  font-size: 6rem;
+  font-weight: bold;
+  margin-bottom: 2%;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+mark {
+  background: none;
+  color: #7189bb;
+}
