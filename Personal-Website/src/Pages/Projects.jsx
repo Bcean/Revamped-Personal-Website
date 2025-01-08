@@ -1,5 +1,14 @@
 import React from "react";
-
+import { MusicPlayer } from "../components/MusicPlayer";
+import { ProjectsContent } from "../components/ProjectsContent";
+import "../styles/Projects.css";
 export const Projects = () => {
-  return <div>Projects</div>;
+  return (
+    <main id="mainProjects">
+      <ProjectsContent></ProjectsContent>
+      <div className="projectsMusicContainer">
+        <MusicPlayer></MusicPlayer>
+      </div>
+    </main>
+  );
 };

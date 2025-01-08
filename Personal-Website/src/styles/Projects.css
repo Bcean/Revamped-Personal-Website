@@ -1,0 +1,67 @@
+#mainProjects {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0% 8% 0% 8%;
+}
+
+.projectsMusicContainer {
+  margin-bottom: 2.5%;
+  width: 50%;
+}
+.projectsContentContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  height: 80vh;
+  align-items: center;
+}
+
+/*Projects items*/
+
+.projectItemContainer {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.projectsItemImg {
+  width: 313px;
+  height: 303px;
+  background-color: white;
+  border-radius: 36px;
+}
+
+#projectItemBlurb {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+#sourceCodeBtn {
+  width: 40%;
+  border-radius: 18px;
+  font-family: inherit;
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  padding: 1%;
+  font-weight: bold;
+  background: rgb(131, 150, 190);
+  background: linear-gradient(
+    180deg,
+    rgba(131, 150, 190, 1) 0%,
+    rgba(111, 133, 183, 1) 95%
+  );
+}
+#sourceCodeBtn:hover {
+  cursor: pointer;
+  filter: brightness(0.75);
+}
+#sourceCodeBtn:active {
+  outline: none;
+  border: none;
+  filter: brightness(0.75);
+}
