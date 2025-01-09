@@ -38,9 +38,11 @@ mark {
   color: #7189bb;
 }
 
-.canvas {
-  width: 100%;
-  height: fit-content;
+.homeImgCon {
+  width: 344px;
+  height: 350px;
+  border-radius: 36px;
+  background-color: white;
   animation: fadeInSlide 2s ease-in-out forwards;
   animation-delay: 0.6s;
   opacity: 0;
@@ -48,7 +50,7 @@ mark {
 
 @keyframes fadeInSlide {
   0% {
-    transform: translateX(-50vw);
+    transform: translateX(-25vw);
     filter: blur(20px);
     opacity: 0;
   }
@@ -58,4 +60,45 @@ mark {
     filter: blur(0px);
     opacity: 1;
   }
+}
+
+.animatedBgContainer {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.generalNoteClass {
+  position: absolute;
+  /* add animation*/
+
+  animation: fly 3s linear;
+}
+
+@keyframes fly {
+  0% {
+    opacity: 0%;
+    transform: translateX(0) scale(0.25);
+    filter: blur(2.5px);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: translateX(-50vw) scale(0.5) ro;
+    filter: blur(0px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-100vw) scale(0.25);
+    filter: blur(10px);
+  }
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
 }

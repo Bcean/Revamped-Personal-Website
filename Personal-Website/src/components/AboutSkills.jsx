@@ -2,12 +2,14 @@ import React from "react";
 import { MusicPlayer } from "./MusicPlayer";
 import "../styles/About.css";
 
-export const AboutSkills = () => {
+export const AboutSkills = ({ iconAnim, activeAnim, animState }) => {
   return (
     <div className="aboutSkillsContainer">
-      <h4 className="currentSkillsHead">My Currrent developer skills</h4>
+      <h4 className="currentSkillsHead">My Current Developer Skills</h4>
       <div className="softwareIconContainer">
         <svg
+          className={iconAnim}
+          style={{ animationIterationCount: `${animState}` }}
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"
@@ -27,6 +29,8 @@ export const AboutSkills = () => {
           ></path>
         </svg>
         <svg
+          className={iconAnim}
+          style={{ animationIterationCount: `${animState}` }}
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"
@@ -46,6 +50,8 @@ export const AboutSkills = () => {
           ></path>
         </svg>
         <svg
+          className={iconAnim}
+          style={{ animationIterationCount: `${animState}` }}
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"
@@ -60,6 +66,8 @@ export const AboutSkills = () => {
           ></path>
         </svg>
         <svg
+          className={iconAnim}
+          style={{ animationIterationCount: `${animState}` }}
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"
@@ -82,6 +90,8 @@ export const AboutSkills = () => {
           <circle cx="24" cy="24" r="4" fill="#80deea"></circle>
         </svg>
         <svg
+          className={iconAnim}
+          style={{ animationIterationCount: `${animState}` }}
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"
@@ -99,6 +109,8 @@ export const AboutSkills = () => {
           ></path>
         </svg>
         <svg
+          className={iconAnim}
+          style={{ animationIterationCount: `${animState}` }}
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"
@@ -125,7 +137,8 @@ export const AboutSkills = () => {
           <circle cx="32" cy="24" r="7" fill="#29b6f6"></circle>
         </svg>
         <svg
-          className="lastGridIcon"
+          className={`lastGridIcon ${iconAnim}`}
+          style={{ animationIterationCount: `${animState}` }}
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"
@@ -139,7 +152,7 @@ export const AboutSkills = () => {
           ></path>
         </svg>
       </div>
-      <MusicPlayer></MusicPlayer>
+      <MusicPlayer changeAnim={activeAnim}></MusicPlayer>
     </div>
   );
 };

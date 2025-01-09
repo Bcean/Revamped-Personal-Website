@@ -7,9 +7,9 @@ export const ContactFormSection = () => {
         <mark>Contact</mark> Me
       </h1>
       <h6 id="contactBlurb">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu
-        ultricies erat.rem ipsum dolor sit amet, consectetur adipiscing elit.
-        Nam eu ultricies erat.
+        If you would like to get in touch with me, you can fill out the form
+        below to email me or click the images on the side to get my Linkedin and
+        GitHub.
       </h6>
       <form>
         <input

@@ -9,10 +9,11 @@ export const HomeContent = () => {
         <mark>Britney</mark>
       </h1>
       <h5 id="homeBlurb">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu
-        ultricies erat. Vivamus auctor efficitur erat id mattis. Fusce blandit
-        in erat porta malesuada. Alikquam luctus metus nibh, sit amet bibendum
-        justo luctus et. Curabitur gravida sit amet leo non facilisis.{" "}
+        I'm currently a freshman studying Computer Engineering at Missouri
+        University of Science and Technology. I've created this personal website
+        to display some of my past, present and future software development
+        projects. This website was built with react so there are some fun
+        interactive buttons you can play with.{" "}
       </h5>
     </div>
   );

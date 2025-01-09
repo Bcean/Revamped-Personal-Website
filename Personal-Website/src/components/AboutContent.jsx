@@ -1,19 +1,21 @@
 import React from "react";
 import "../styles/About.css";
+import AboutVideo from "../assets/AboutVideo.mp4";
 export const AboutContent = () => {
   return (
     <div className="aboutContentContainer">
-      <div className="aboutContentImg">
-        <img></img>
-      </div>
-      <hr id="aboutHr"></hr>
       <h3 id="aboutHead">
         <mark>About</mark> Me
       </h3>
+      <div className="aboutContentImg">
+        <video src={AboutVideo} autoPlay muted loop></video>
+      </div>
+      <hr id="aboutHr"></hr>
+
       <h5 id="aboutBlurb">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu
-        ultricies erat. Vivamus auctor efficitur erat id mattis. Fusce blandit
-        in erat porta malesuada.highlight languages
+        Beyond aspiring to become a software engineer, I have a very musical
+        background as I am a trumpet player with 6 years of experience. Some of
+        the programming languages I'm confident in are Python, and JavaScript.
       </h5>
     </div>
   );

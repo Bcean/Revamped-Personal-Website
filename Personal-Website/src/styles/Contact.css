@@ -141,16 +141,19 @@ form {
   justify-content: center;
   animation: fadeInSlide 2s ease-in-out forwards;
   opacity: 0;
-  animation-delay: 1.4s;
+  animation-delay: 0.7s;
 }
-#contactAudioVisual {
-  animation: fadeInSlide 2s ease-in-out forwards;
-  opacity: 0;
-  animation-delay: 1.6s;
+.contactIcons {
+  transition: 0.3s;
 }
+.contactIcons:hover {
+  transform: scale(1.25);
+  cursor: pointer;
+}
+
 @keyframes fadeInSlide {
   0% {
-    transform: translateX(-50vw);
+    transform: translateX(-25vw);
     filter: blur(20px);
     opacity: 0;
   }

@@ -39,7 +39,7 @@ input:focus {
   cursor: pointer;
 }
 #aboutMusicControl {
-  animation: fadeInSlide 2s ease-in-out forwards;
+  animation: fadeInSlide 1s ease-in-out forwards;
   animation-delay: 2.5s;
   opacity: 0;
 }
@@ -56,7 +56,7 @@ input:focus {
 }
 @keyframes fadeInSlide {
   0% {
-    transform: translateX(-50vw);
+    transform: translateX(-25vw);
     filter: blur(20px);
     opacity: 0;
   }

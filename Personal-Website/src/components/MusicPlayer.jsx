@@ -6,15 +6,25 @@ import { faForwardStep } from "@fortawesome/free-solid-svg-icons";
 import { faBackwardStep } from "@fortawesome/free-solid-svg-icons";
 import { faPause } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
-export const MusicPlayer = () => {
+export const MusicPlayer = ({ setPlay, setPause, changeAnim }) => {
   const [musicStatusLogo, setmusicStatusLogo] = useState(faPlay);
 
   const changeStaus = () => {
     if (musicStatusLogo === faPlay) {
-      setmusicStatusLogo(faPause);
+      setmusicStatusLogo(faPause); //music playing
+      setPlay();
+    } else if (musicStatusLogo === faPause) {
+      setmusicStatusLogo(faPlay);
+      setPause();
+    }
+  };
+
+  const changeStausAbout = () => {
+    if (musicStatusLogo === faPlay) {
+      setmusicStatusLogo(faPause); //music playing
     } else if (musicStatusLogo === faPause) {
       setmusicStatusLogo(faPlay);
     }
@@ -34,6 +44,11 @@ export const MusicPlayer = () => {
 
   const [musicPlayerID, setmusicPlayerID] = useState("default");
 
+  const changeAnimEvent = () => {
+    changeStausAbout();
+    changeAnim();
+  };
+
   useEffect(() => {
     if (isHomePage) {
       setmusicPlayerID("homeMusicControl");
@@ -47,22 +62,59 @@ export const MusicPlayer = () => {
   return (
     <div className="musicPlayerContainer" id={musicPlayerID}>
       <div className="controlBtns">
-        <FontAwesomeIcon
-          className="controlIcons"
-          icon={faBackwardStep}
-          style={{ color: "#ffffff" }}
-        />
+        <Link
+          to={
+            isHomePage
+              ? null
+              : isAboutPage
+              ? "/"
+              : isProjectsPage
+              ? "/About"
+              : isContactPage
+              ? "/Projects"
+              : null
+          }
+        >
+          <FontAwesomeIcon
+            className="controlIcons"
+            icon={faBackwardStep}
+            style={{ color: "#ffffff" }}
+          />
+        </Link>
+
         <FontAwesomeIcon
           className="controlIconsPlay"
           icon={musicStatusLogo}
           style={{ color: "#ffffff" }}
-          onClick={changeStaus}
+          onClick={
+            isHomePage
+              ? changeStaus
+              : isContactPage
+              ? changeStaus
+              : isAboutPage
+              ? changeAnimEvent
+              : null
+          }
         />
-        <FontAwesomeIcon
-          className="controlIcons"
-          icon={faForwardStep}
-          style={{ color: "#ffffff" }}
-        />
+        <Link
+          to={
+            isHomePage
+              ? "/About"
+              : isAboutPage
+              ? "/Projects"
+              : isProjectsPage
+              ? null
+              : isContactPage
+              ? "/"
+              : null
+          }
+        >
+          <FontAwesomeIcon
+            className="controlIcons"
+            icon={faForwardStep}
+            style={{ color: "#ffffff" }}
+          />
+        </Link>
       </div>
     </div>
   );

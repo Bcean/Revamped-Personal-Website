@@ -1,23 +1,35 @@
 import React from "react";
 import "../styles/Projects.css";
 
-export const ProjectsItem = ({ animationDelaySecs }) => {
+export const ProjectsItem = ({
+  animationDelaySecs,
+  sourceCodeLink,
+  projectHead,
+  projectBlurb,
+  projectLink,
+  imgSrc,
+}) => {
+  const handleSourceCode = () => {
+    window.open(`${sourceCodeLink}`, "_blank");
+  };
+
+  const handleProjectLink = () => {
+    window.open(`${projectLink}`, "_blank");
+  };
+
   return (
     <div
       className="projectItemContainer projectItem"
       style={{ animationDelay: `${animationDelaySecs}s`, opacity: 0 }}
     >
-      <div className="projectsItemImg">
-        <img></img>
+      <div className="projectsItemImg" onClick={handleProjectLink}>
+        <img src={imgSrc}></img>
       </div>
-      <hr></hr>
-      <h3>Project #1</h3>
-      <h5 id="projectItemBlurb">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu
-        ultricies erat. Vivamus auctor efficitur erat id mattis. Fusce blandit
-        in erat porta malesuada.highlight languages
-      </h5>
-      <button id="sourceCodeBtn">Source Code</button>
+      <h3>{projectHead}</h3>
+      <h5 id="projectItemBlurb">{projectBlurb}</h5>
+      <button id="sourceCodeBtn" onClick={handleSourceCode}>
+        Source Code
+      </button>
     </div>
   );
 };
