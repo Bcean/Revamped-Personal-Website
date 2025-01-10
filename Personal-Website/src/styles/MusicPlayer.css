@@ -1,7 +1,7 @@
 .controlBtns {
   display: flex;
   justify-content: space-evenly;
-  width: 40%;
+  width: 30%;
   align-items: center;
   padding: 2.5%;
   border-radius: 15px;
@@ -66,4 +66,33 @@ input:focus {
     filter: blur(0px);
     opacity: 1;
   }
+}
+
+@media (min-width: 1600px) {
+  .controlBtns {
+    width: 50%;
+  }
+  .controlIcons {
+    font-size: 3rem;
+  }
+
+  .controlIconsPlay {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  .controlIconsPlay {
+    font-size: 2rem;
+  }
+  .controlBtns {
+    width: 45%;
+  }
+
+  .musicPlayerContainer {
+    margin-bottom: 5%;
+  }
+}
+
+@media (max-width: 800px) {
 }

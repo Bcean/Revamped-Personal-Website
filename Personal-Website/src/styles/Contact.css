@@ -38,10 +38,6 @@ input[type="text"] {
   opacity: 0;
 }
 
-input [type="text"]:active {
-  border: none;
-}
-
 input[type="email"] {
   width: 350px;
   height: 40px;
@@ -50,10 +46,6 @@ input[type="email"] {
   border: none;
   animation: fadeInSlide 2s ease-in-out forwards;
   opacity: 0;
-}
-
-input [type="email"]:active {
-  border: none;
 }
 
 textarea {
@@ -70,9 +62,10 @@ textarea {
   padding: 1%;
 }
 
-textarea:active {
+textarea:focus {
   border: none;
   outline: none;
+  border: 3px #7d91bd solid;
 }
 button {
   width: 250px;
@@ -80,7 +73,7 @@ button {
   font-family: inherit;
   font-weight: bold;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1rem;
   border-radius: 15px;
   background-color: #7189bb;
   outline: none;
@@ -95,6 +88,7 @@ input[type="text"]:hover {
 }
 input {
   padding: 1%;
+  font-family: inherit;
 }
 input::placeholder {
   font-family: inherit;
@@ -109,7 +103,9 @@ textarea::placeholder {
   font-size: 1rem;
   color: #c2bebe;
 }
-
+input:focus {
+  border: 3px #7d91bd solid;
+}
 button:hover {
   cursor: pointer;
   color: rgb(226, 222, 222);
@@ -162,5 +158,102 @@ form {
     transform: translateX(0);
     filter: blur(0px);
     opacity: 1;
+  }
+}
+
+@media (min-width: 1600px) {
+  #contactHead {
+    font-size: 5rem;
+  }
+  #contactBlurb {
+    font-size: 2rem;
+  }
+  input[type="text"] {
+    font-size: 2rem;
+    width: 400px;
+    height: 90px;
+  }
+
+  input[type="email"] {
+    font-size: 2rem;
+    width: 400px;
+    height: 90px;
+  }
+
+  textarea {
+    font-size: 2rem;
+    max-width: 400px;
+    max-height: 310px;
+    min-width: 400px;
+    min-height: 150px;
+  }
+  input::placeholder {
+    font-size: 2rem;
+  }
+
+  textarea::placeholder {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 2rem;
+  }
+  .contactIcons {
+    transform: scale(1.25);
+    margin-left: 5%;
+  }
+}
+
+/*mobile*/
+@media (max-width: 800px) {
+  .contactContainer {
+    width: 100%;
+    margin-top: 25%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: center;
+  }
+  .contactRightContainer {
+    width: 100%;
+  }
+
+  input[type="text"] {
+    font-size: 0.75rem;
+    width: 300px;
+    height: 40px;
+  }
+
+  input[type="email"] {
+    font-size: 0.75rem;
+    width: 300px;
+    height: 40px;
+  }
+
+  textarea {
+    font-size: 0.75rem;
+    max-width: 300px;
+    max-height: 210px;
+    min-width: 300px;
+    min-height: 50px;
+  }
+  input::placeholder {
+    font-size: 0.75rem;
+  }
+
+  textarea::placeholder {
+    font-size: 0.75rem;
+  }
+
+  button {
+    font-size: 0.75rem;
+  }
+  .contactIcons {
+    transform: scale(1.25);
+    margin-left: 5%;
+  }
+
+  .contactRightContainer {
+    margin-top: 5%;
   }
 }

@@ -10,10 +10,11 @@ body {
   overflow: hidden;
   background: rgb(64, 62, 107);
   background: linear-gradient(
-    180deg,
+    to bottom,
     rgba(64, 62, 107, 1) 0%,
     rgba(90, 50, 80, 1) 95%
   );
+  background-attachment: fixed;
   color: #ffff;
   font-family: "Inter", serif;
   font-optical-sizing: auto;
@@ -26,4 +27,28 @@ body {
 #root {
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 800px) {
+  body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: max-content;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background-color: #4c3d59;
+  }
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 48px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #4c3d59;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
 }

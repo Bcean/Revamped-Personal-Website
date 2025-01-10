@@ -25,7 +25,7 @@ export const ProjectsItem = ({
       <div className="projectsItemImg" onClick={handleProjectLink}>
         <img src={imgSrc}></img>
       </div>
-      <h3>{projectHead}</h3>
+      <h3 id="projectHead">{projectHead}</h3>
       <h5 id="projectItemBlurb">{projectBlurb}</h5>
       <button id="sourceCodeBtn" onClick={handleSourceCode}>
         Source Code

@@ -122,3 +122,74 @@ video {
   object-fit: cover;
   border-radius: 15px;
 }
+
+@media (min-width: 1600px) {
+  #aboutHead {
+    font-size: 6rem;
+  }
+  .aboutContentImg {
+    width: 394px;
+    height: 415px;
+  }
+
+  svg {
+    width: 100px;
+    height: 100px;
+  }
+  .currentSkillsHead {
+    font-size: 3rem;
+  }
+  #aboutBlurb {
+    font-size: 1.75rem;
+  }
+}
+@media (max-width: 1300px) {
+  #aboutBlurb {
+    font-size: 1rem;
+  }
+  .aboutContentImg {
+    width: 294px;
+    height: 315px;
+  }
+  .aboutContentContainer {
+    width: 40%;
+  }
+  #aboutHead {
+    font-size: 4rem;
+  }
+}
+
+/*mobile*/
+@media (max-width: 800px) {
+  .currentSkillsHead {
+    font-size: 1.5rem;
+  }
+  .aboutContentContainer {
+    width: 100%;
+    margin-top: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutContentImg {
+    width: 224px;
+    height: 245px;
+  }
+  #aboutHead {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .aboutSkillsContainer {
+    width: 100%;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+  svg {
+    width: 50px;
+    height: 50px;
+  }
+}
