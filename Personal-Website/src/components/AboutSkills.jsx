@@ -8,7 +8,7 @@ export const AboutSkills = ({ iconAnim, activeAnim, animState }) => {
       <h4 className="currentSkillsHead">My Current Developer Skills</h4>
       <div className="softwareIconContainer">
         <svg
-          className={iconAnim}
+          className={`${iconAnim} skillsIcons`}
           style={{ animationIterationCount: `${animState}` }}
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
@@ -29,7 +29,7 @@ export const AboutSkills = ({ iconAnim, activeAnim, animState }) => {
           ></path>
         </svg>
         <svg
-          className={iconAnim}
+          className={`${iconAnim} skillsIcons`}
           style={{ animationIterationCount: `${animState}` }}
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
@@ -50,7 +50,7 @@ export const AboutSkills = ({ iconAnim, activeAnim, animState }) => {
           ></path>
         </svg>
         <svg
-          className={iconAnim}
+          className={`${iconAnim} skillsIcons`}
           style={{ animationIterationCount: `${animState}` }}
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
@@ -66,7 +66,7 @@ export const AboutSkills = ({ iconAnim, activeAnim, animState }) => {
           ></path>
         </svg>
         <svg
-          className={iconAnim}
+          className={`${iconAnim} skillsIcons`}
           style={{ animationIterationCount: `${animState}` }}
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
@@ -90,7 +90,7 @@ export const AboutSkills = ({ iconAnim, activeAnim, animState }) => {
           <circle cx="24" cy="24" r="4" fill="#80deea"></circle>
         </svg>
         <svg
-          className={iconAnim}
+          className={`${iconAnim} skillsIcons`}
           style={{ animationIterationCount: `${animState}` }}
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
@@ -109,7 +109,7 @@ export const AboutSkills = ({ iconAnim, activeAnim, animState }) => {
           ></path>
         </svg>
         <svg
-          className={iconAnim}
+          className={`${iconAnim} skillsIcons`}
           style={{ animationIterationCount: `${animState}` }}
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
@@ -137,7 +137,7 @@ export const AboutSkills = ({ iconAnim, activeAnim, animState }) => {
           <circle cx="32" cy="24" r="7" fill="#29b6f6"></circle>
         </svg>
         <svg
-          className={`lastGridIcon ${iconAnim}`}
+          className={`${iconAnim} skillsIcons lastGridIcon`}
           style={{ animationIterationCount: `${animState}` }}
           xmlns="http://www.w3.org/2000/svg"
           x="0px"

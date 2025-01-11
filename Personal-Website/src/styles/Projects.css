@@ -133,7 +133,7 @@
   .projectsContentContainer {
     display: flex;
     flex-direction: column;
-
+    margin-top: 5%;
     align-items: center;
 
     height: fit-content;

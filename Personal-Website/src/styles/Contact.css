@@ -208,7 +208,7 @@ form {
 @media (max-width: 800px) {
   .contactContainer {
     width: 100%;
-    margin-top: 25%;
+    margin-top: 5%;
 
     display: flex;
     align-items: center;
@@ -249,7 +249,8 @@ form {
     font-size: 0.75rem;
   }
   .contactIcons {
-    transform: scale(1.25);
+    width: 120px;
+    height: 120px;
     margin-left: 5%;
   }
 
