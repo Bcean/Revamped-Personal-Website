@@ -1,19 +1,26 @@
+/* General styling for nav */
 nav {
   width: 100%;
-
   height: 10vh;
-}
-#navLeft {
-  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 1% 5% 1% 5%;
-  height: 100%;
   align-items: center;
+  padding: 1% 5%;
 }
+
+#navLeft {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 #navRight {
-  display: none;
+  display: none; /* Default hidden on larger screens */
+  cursor: pointer;
 }
+
+/* Links styling */
 .link {
   text-decoration: none;
   color: white;
@@ -27,6 +34,7 @@ nav {
   text-shadow: 0px 4px 5px rgba(225, 225, 225, 0.2);
 }
 
+/* Styling for horizontal navbar links on large screens */
 ul {
   list-style-type: none;
   display: flex;
@@ -39,59 +47,48 @@ li {
 
 .otherLinks {
   width: 25%;
+  display: flex;
+  justify-content: space-between;
 }
 
 h1 {
   font-size: 2.5rem;
 }
 
-@media (max-width: 1300px) {
-  .otherLinks {
-    width: 40%;
-  }
-}
-
+/* Media query for screen sizes below 800px */
 @media (max-width: 800px) {
-  nav {
-    position: absolute;
-    z-index: 1;
-    height: 100%;
-
-    display: flex;
-    justify-content: space-between;
-  }
-  #navLeft {
-    position: absolute;
-    z-index: 1;
-    width: 40%;
-    height: 100%;
-    flex-direction: column;
-    padding-left: 5%;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background-color: #4d395f;
-  }
-
   #navRight {
-    height: 10%;
-    z-index: 1;
-    justify-self: flex-end;
-    position: absolute;
-    right: 0;
+    display: block; /* Show hamburger menu button on small screens */
     font-size: 2rem;
   }
 
+  /* Initially hide the sidebar and make it fixed to the left side */
   .otherLinks {
-    margin-top: 5%;
-
-    display: flex;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Start off the screen (hidden) */
+    height: 100%;
+    width: 250px; /* Sidebar width */
+    background-color: #4d395f;
     flex-direction: column;
+    padding-top: 60px; /* Padding to avoid the top edge */
+    z-index: 1000; /* Ensure it's above other content */
+    transition: left 0.3s ease-in-out; /* Add smooth transition for sliding */
   }
+
+  .otherLinks.active {
+    display: block; /* Ensure it's displayed when active */
+    left: 0; /* Move the sidebar into view when active */
+  }
+
   ul {
     flex-direction: column;
     gap: 1rem;
+    align-items: center;
   }
+
   #navRight {
-    display: block;
+    display: block; /* Show hamburger button */
   }
 }

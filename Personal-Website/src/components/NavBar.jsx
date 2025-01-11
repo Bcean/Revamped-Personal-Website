@@ -1,16 +1,11 @@
-import React from "react";
-import "../styles/NavBar.css";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { faX } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
-import { useEffect } from "react";
+import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
+import "../styles/NavBar.css";
 
 export const NavBar = () => {
-  //for changing colors based on location
-
   const location = useLocation();
 
   const isHomePage = location.pathname === "/";
@@ -18,39 +13,26 @@ export const NavBar = () => {
   const isProjectsPage = location.pathname === "/Projects";
   const isContactPage = location.pathname === "/Contact";
 
-  //show navbar on the side
-  const [navActivityBtn, setnavActivityBtn] = useState(faBars);
-  const [backgroundColorStatus, setbackgroundColorStatus] =
-    useState("transparent");
-  const [displayStatus, setdisplayStatus] = useState("none");
+  const [navActivityBtn, setNavActivityBtn] = useState(faBars); // Hamburger icon state
+  const [isOpen, setIsOpen] = useState(false); // State for toggling navbar visibility
+  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > 800);
+
   const showNav = () => {
     if (navActivityBtn === faBars) {
-      setnavActivityBtn(faX);
-      setbackgroundColorStatus("#4d395f");
-      setdisplayStatus("block");
+      setNavActivityBtn(faX);
+      setIsOpen(true);
     } else if (navActivityBtn === faX) {
-      setnavActivityBtn(faBars);
-      setbackgroundColorStatus("transparent");
-      setdisplayStatus("none");
+      setNavActivityBtn(faBars);
+      setIsOpen(false);
     }
   };
 
-  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > 800);
-
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 800) {
-        setdisplayStatus("block");
-      } else {
-        setdisplayStatus("none");
-      }
+      setIsWideScreen(window.innerWidth > 800);
     };
 
-    // Run on initial render to ensure the correct state
-    handleResize();
-
     window.addEventListener("resize", handleResize);
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -58,7 +40,7 @@ export const NavBar = () => {
 
   return (
     <nav>
-      <div id="navLeft" style={{ backgroundColor: backgroundColorStatus }}>
+      <div id="navLeft">
         <h1 className="headHome">
           <Link
             to="/"
@@ -73,7 +55,7 @@ export const NavBar = () => {
             BC.
           </Link>
         </h1>
-        <div className="otherLinks" style={{ display: displayStatus }}>
+        <div className={`otherLinks ${isOpen ? "active" : ""}`}>
           <ul>
             <li>
               <Link

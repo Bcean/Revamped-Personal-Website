@@ -31,9 +31,9 @@ body {
 
 @media (max-width: 800px) {
   body {
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
-    height: max-content;
+    height: auto;
   }
 
   ::-webkit-scrollbar-thumb {
