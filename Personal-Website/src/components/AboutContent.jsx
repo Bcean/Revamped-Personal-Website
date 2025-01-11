@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/About.css";
-import AboutVideo from "../assets/AboutVideo.mp4";
+import Gradimg from "../assets/Gradimg.jpg";
 export const AboutContent = () => {
   return (
     <div className="aboutContentContainer">
@@ -8,7 +8,7 @@ export const AboutContent = () => {
         <mark>About</mark> Me
       </h3>
       <div className="aboutContentImg">
-        <video src={AboutVideo} autoPlay muted loop></video>
+        <img src={Gradimg} autoPlay muted loop className="aboutImg"></img>
       </div>
       <hr id="aboutHr"></hr>
 
